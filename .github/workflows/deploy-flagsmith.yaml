@@ -16,4 +16,4 @@ on:
 
 jobs:
   deploy:
-    uses: miguelmoreba/github-env-test/.github/workflows/deploy-helm.yaml@main
+    uses: miguelmoreba/github-envs-test/.github/workflows/deploy-helm.yaml@main
