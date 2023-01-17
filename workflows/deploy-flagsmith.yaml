@@ -1,0 +1,19 @@
+name: Deploy flagsmith
+
+on:
+  workflow_dispatch:
+    inputs:
+      cluster-override:
+        description: If present, overrides active cluster. Can be blu,grn,none
+        required: false
+      env:
+        type: choice
+        description: "Environment to deploy to"
+        required: true
+        options:
+        - tst
+        - prod
+
+jobs:
+  deploy:
+    uses: miguelmoreba/github-env-test/.github/workflows/deploy-helm.yaml@main

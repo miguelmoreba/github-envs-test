@@ -1,0 +1,13 @@
+name: Deploy a Helm chart to an environment.
+
+on:
+  workflow_call:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: tst
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ inputs.repo-ref }}
